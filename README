@@ -1,3 +1,5 @@
+**PLEASE NOTE: MTSplitViewController HAS BEEN DISCONTINUED! With iOS 5+ view controller containment you can build complex controller hierarchies without problems!**
+
 MTSplitViewController
 =====================
 
