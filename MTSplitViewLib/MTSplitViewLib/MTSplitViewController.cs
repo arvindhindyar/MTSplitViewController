@@ -949,6 +949,16 @@ namespace MTSplitViewLib
 			// Account for status bar, which always subtracts from the height (since it's always at the top of the screen).
 			fHeight -= fStatusBarHeight;
 	
+			// Account for the tab bar if we're in a tab controller
+			if (TabBarController != null) {			
+				fHeight -= TabBarController.TabBar.Frame.Size.Height;
+			}
+			
+			// Account for the navigation bar if we're in a navigation controller
+			if (NavigationController != null && !NavigationController.NavigationBarHidden) {
+				fHeight -= NavigationController.NavigationBar.Frame.Size.Height;
+			}
+			
 			return new RectangleF (0, 0, fWidth, fHeight);
 		}
 		
